@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<div class="text-center">
+	<img src="~/images/multiplication.jpeg" class="img-rounded imgNumbers" alt="Numbers image">
+</div>
+<br />
+<p>This aplication is to display the Multiplication table in a range from <b>3 to 15</b>. The application allows to display the values in <b>3 differente formats (Decimal, Binary, Hexadecimal)</b>. Each value of the table has a tool tip taht contains the information about the operation and his repesentation in Decimal as well the other format has been selected for display. The <b>"Prime numbers"</b> are represented with a different background-color as well in the tool tip text</p>
+
+<p>The application can receive 2 (optional) parameters from the url (Querystring)</p>
+<ol>
+	<li><b>matrix_size</b>:Size of the table to be represented (3 to 15)</li>
+	<li><b>matrix_base</b>:Format to display the results of the table (decimal, binary, hex)</li>
+</ol>

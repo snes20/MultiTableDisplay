@@ -1,0 +1,21 @@
+﻿
+@using MultiplicationTableMVC.Helpers
+@using MultiplicationTableMVC.Models
+@model MultiplyViewModel
+
+
+@(Html.Table(Model.Size, Model.Representation))
+
+<br />
+
+<table class="table tableLegend">
+	<tbody>
+		<tr>
+			<td colspan="2" ><b>Legend</b></td>
+		</tr>
+		<tr>
+			<td id="tdLegend"></td>
+			<td>Prime Number</td>
+		</tr>
+	</tbody>
+</table>

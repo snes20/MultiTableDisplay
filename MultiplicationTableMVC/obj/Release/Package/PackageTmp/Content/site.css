@@ -1,0 +1,50 @@
+﻿body {
+
+}
+
+.FormatTable th {
+	text-align: center;
+	border: 1px solid #ABD0BC !important;
+}
+
+.FormatTable td {
+	border: 1px solid #ABD0BC !important;
+	text-align: right;
+	min-width: 42px;
+}
+
+.cyanColor {
+	background-color: #C6E1F3;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+}
+
+.primeColor {
+	background-color: #5FBA7D;
+	color: white;
+	font-weight: bold;
+}
+
+
+#tableContainer {
+	width:40%
+}
+
+.imgNumbers {
+	max-width: 50%;
+}
+
+.m-top {
+	margin-top:20px;
+}
+
+.tableLegend {
+	border: 0px hidden #ABD0BC !important;
+	text-align:left !important;
+}
+
+#tdLegend {
+	background-color: #5FBA7D;
+	max-width: 42px;
+}

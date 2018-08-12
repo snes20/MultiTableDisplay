@@ -1,0 +1,60 @@
+﻿@using MultiplicationTableMVC.Helpers
+@using MultiplicationTableMVC.Models
+@model MultiplyViewModel
+@{
+	ViewBag.Title = "Multiplication Table";
+
+}
+
+<h2>Index</h2>
+<div id="tableContainer">
+
+	<div class="form-group">
+		<div class="input-group">
+			<span class="input-group-addon">Size of the Table:</span>
+			@Html.DropDownListFor(m => m.Size, Enumerable.Range(3, 13).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "form-control" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="input-group">
+			<span class="input-group-addon">Display format:</span>
+			@Html.DropDownListFor(m => m.Representation, EnumHelper.GetSelectList(typeof(Constants.NumericRepresentation)),
+   new { @class = "form-control" })
+		</div>
+	</div>
+
+	<div>
+		<button id="btnRefreshTable" class="btn btn-primary btn-block disabled">Refresh</button>
+	</div>
+
+	<div class="m-top">
+		@{
+			Html.RenderPartial("_TableDisplay");
+		}
+	</div>
+
+	<input type="hidden" id="hdSize" value="@Model.Size" />
+	<input type="hidden" id="hdRepresenation" value="@Model.Representation" />
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+
+	$(document).ready(function () {
+		$('#btnRefreshTable').on('click', function () {
+			refreshTableView();
+		});
+
+		$('#Representation').on("change", function () {
+			validateChange();
+		});
+
+		$('#Size').on("change", function () {
+			validateChange();
+		});
+	});
+</script>
+
